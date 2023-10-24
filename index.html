@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal portfolio website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header" >
+    <div class="container">
+        <nav>
+            <img src="images/Hirlo.png" class="logo">
+            <ul>
+                <li> <a href="#"> Home</a></li>
+                <li> <a href="#"> About</a></li>
+                <li> <a href="#"> Services</a></li>
+                <li> <a href="#"> Portfolio</a></li>
+                <li> <a href="#"> Contact</a></li>
+                <li> <a href="#"> Hobbies</a></li>
+                
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Java developer</p>
+            <h1>Hi, i'm <span>Hirlo </span>Vitor<br> from Brazil</h1>
+
+        </div>
+    </div>
+
+ <!-------------------about section---------------->   
+
+<div id="about">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/user.png">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>Oi, eu sou Hirlo, um entusiasta da nutrição e da tecnologia! Atualmente, estou navegando pelo mundo da Nutrição e Análise e Desenvolvimento de Sistemas, buscando encontrar maneiras criativas de unir esses dois mundos aparentemente distintos. Minha jornada acadêmica me proporcionou uma compreensão profunda de como a nutrição afeta nossos corpos e nossa saúde, ao mesmo tempo em que a área de Desenvolvimento de Sistemas me permite explorar a tecnologia e a inovação em sua forma mais pura Fora dos livros e códigos, sou um apaixonado por xadrez. A estratégia e a lógica envolvidas nesse jogo me ensinaram a importância do pensamento crítico, o que é uma habilidade que aplico tanto na minha vida acadêmica quanto nos meus projetos pessoais.</p>
+           
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Java (...)</span><br>bla..bla(...)</li>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                    <li><span>Java (...)</span><br>bla(...)</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                    <li><span>Java (...)</span><br>Python(...)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div> 
+<!--------------serives---------->
+<div id="service">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+
+</html>
